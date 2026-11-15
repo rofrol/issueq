@@ -1,0 +1,11 @@
+## Next, in order
+
+## Proposed
+
+pxdzt6 issueq: recover a change cut short by a kill between writing issues/ and committing it
+ao2kri issueq: write each file through an exclusively created temporary file instead of the fixed name ID.md.issueq-tmp
+wh3bgu issueq: bind a `Locked` to its repository so a change cannot run on another repository than the one locked
+tqpc32 issueq: a test that a git started under the lock keeps it after its parent is killed
+43xjee issueq: say "main worktree" instead of rr2's "checkout to integrate into" in mainCheckout's errors
+
+## Needs a decision

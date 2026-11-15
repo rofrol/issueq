@@ -1,0 +1,3 @@
+issueq: recover a change cut short by a kill between writing issues/ and committing it
+
+Found in consult round 20261115-203515-b8cc (sol) while extracting the queue from rr2. `publish` (Issueq.lean) writes each item file and ORDER by a rename, then commits; a holder killed between those steps leaves issues/ changed but not committed, and the next change refuses it (`ensureClean`) until the owner restores or commits it. The lock prevents concurrent changes, not a partial one. Options: a durable intent record written before the files and replayed or undone under the lock at the next change, or keep the refusal as the contract (README says so now).
